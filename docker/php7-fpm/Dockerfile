@@ -39,6 +39,6 @@ RUN echo "xdebug.idekey=\"PHPSTORM\"" >> /usr/local/etc/php/conf.d/docker-php-ex
 RUN echo "xdebug.remote_port=9001" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 
-RUN echo 'alias con="php app/console"' >> ~/.bashrc
+RUN echo 'alias sf="php app/console"' >> ~/.bashrc
 RUN echo 'alias phpunit="vendor/phpunit/phpunit/phpunit"' >> ~/.bashrc
 
