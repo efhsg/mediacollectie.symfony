@@ -9,6 +9,7 @@
 /build/
 /vendor/
 /bin/
+/logs/
 /composer.phar
 /.data
 .idea/
