@@ -1,8 +1,8 @@
 version: '2'
 
 services:
-    db:
-        container_name: mediacollectie_db
+    mysql:
+        container_name: sym_mc_db
         image: mysql/mysql-server:5.7
         command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
         ports:
@@ -16,7 +16,7 @@ services:
             MYSQL_USER: ${MYSQL_USER}
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     php:
-        container_name: mediacollectie_php
+        container_name: sym_mc_php
         build:
             context: docker/php7-fpm
             args:
@@ -25,7 +25,7 @@ services:
             - ${SYMFONY_APP_PATH}:/var/www/symfony
             - ./logs/symfony:/var/www/symfony/logs
     nginx:
-        container_name: mediacollectie_nginx
+        container_name: sym_mc_nginx
         build: docker/nginx
         ports:
             - 80:80

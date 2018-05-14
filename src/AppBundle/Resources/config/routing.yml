@@ -1,0 +1,10 @@
+app_user:
+    resource: "@AppBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+login:
+  path: /login
+  defaults: {_controller: AppBundle:Security:login}
+
+logout:
+  path: /logout
